@@ -1,0 +1,138 @@
+<html>
+<!-Filip Szmigielsk!->
+<body>
+<textarea cols="78"rows="35">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Zadanie JavaScript</title>
+<meta charset="utf-8">
+<style>
+h1 { text-transform: uppercase; }
+</style>
+</head>
+<body>
+<h1>Proste działania</h1><br><br><br>
+<h2>Szmigielski 3F</h2>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_szmig()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_szmig()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_szmig()">
+<input type="button" value="DZIELENIE" onclick="iloraz_szmig()">
+<input type="button" value="Teoria-Szmig" onclick="teoria_szmig()">
+<div id="wynik" style="margin-top:20px;"></div>
+<script>
+function suma_szmig()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var suma = a + b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+}
+}
+function roznica_szmig()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var roznica = a - b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+}
+}
+function iloczyn_szmig()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var iloczyn = a * b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+}
+}
+function iloraz_szmig()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+if (b == 0)
+{
+document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+}
+else
+{
+var iloraz = a / b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+}
+}
+}
+function teoria_szmig()
+{
+document.write('<font color=green size=4>Pierwsza linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;label for="a"&gt;</font>');
+document.write('<font color=red size=4>Podaj pierwszą liczbę:</font>');
+document.write('<font color=red size=4>&lt;/label&gt;</font><br>');
+document.write('<font color=red size=4>&lt;input type="number" id="a"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Tworzy pole formularza do wpisania liczby. Id pola to \'a\'.</font><br><br>');
+document.write('<font color=green size=4>Druga linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;label for="b"&gt;</font>');
+document.write('<font color=red size=4>Podaj drugą liczbę:</font>');
+document.write('<font color=red size=4>&lt;/label&gt;</font><br>');
+document.write('<font color=red size=4>&lt;input type="number" id="b"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Tworzy drugie pole do wpisania liczby. Id pola to \'b\'.</font><br><br>');
+document.write('<font color=green size=4>Trzecia linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;input type="button" value="DODAWANIE" onclick="suma_szmig()"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Przycisk uruchamiający funkcję dodawania.</font><br><br>');
+document.write('<font color=green size=4>Czwarta linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;input type="button" value="ODEJMOWANIE" onclick="roznica_szmig()"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Przycisk uruchamiający funkcję odejmowania.</font><br><br>');
+document.write('<font color=green size=4>Piąta linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;input type="button" value="MNOŻENIE" onclick="iloczyn_szmig()"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Przycisk uruchamiający funkcję mnożenia.</font><br><br>');
+document.write('<font color=green size=4>Szósta linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;input type="button" value="DZIELENIE" onclick="iloraz_szmig()"&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Przycisk uruchamiający funkcję dzielenia.</font><br><br>');
+document.write('<font color=green size=4>Siódma linia teorii</font><br>');
+document.write('<font color=red size=4>&lt;div id="wynik"&gt;&lt;/div&gt;</font><br>');
+document.write('<font color=green size=4>Wyjaśnienie:</font><br>');
+document.write('<font color=red size=4>Miejsce na stronie, w którym wyświetlany jest wynik działania.</font><br>');
+}
+</script>
+</body>
+</html>
+
+</textarea>
+</body>
+</html>

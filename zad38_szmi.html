@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 38</title>
+</head>
+
+<body style="background-color:silver;">
+
+<script>
+
+let imie="Filip";
+let nazwisko="Szmigielski";
+let dzien_urodzenia=15;
+let nr_dziennik=26;
+
+
+
+let liczba1_szmig = imie.length;
+let liczba2_szmig = liczba1_szmig + 7;
+let liczba3_szmig = nazwisko.length;
+let liczba4_szmig = liczba3_ksia + 4;
+
+let wielkosc = 40 + (nr_dziennik % 7);
+
+
+
+document.write("<font color=green size="+wielkosc+">");
+document.write("Moje nazwisko to: "+nazwisko+" "+imie+"<br>");
+document.write("liczba1 = "+liczba1_szmig+"<br>");
+document.write("liczba2 = "+liczba2_szmig+"<br>");
+document.write("liczba3 = "+liczba3_szmig+"<br>");
+document.write("liczba4 = "+liczba4_szmig+"<br>");
+document.write("</font>");
+
+
+
+document.write("<br>");
+
+document.write("<font color=red size="+wielkosc+">");
+document.write("--------------MENU-------------<br>");
+document.write(liczba1_szmig+" - teoria o operatorach logicznych<br>");
+document.write((liczba3_szmig+20)+" - sprawdzanie przedziału ("+liczba1_szmig+" ; "+liczba2_szmig+"]<br>");
+document.write((dzien_urodzenia+50)+" - sprawdzanie przedziału (-∞ ; "+liczba1_szmig+") lub ["+liczba2_szmig+" ; +∞)<br>");
+document.write("</font>");
+
+
+
+let opcja_szmig = prompt("Podaj numer opcji");
+
+
+if(opcja_szmig == liczba1_szmig)
+{
+document.write("<font color=blue size=7>Teoria operatorów logicznych</font><br>");
+
+document.write("Operator AND (&&) - oba warunki muszą być prawdziwe<br>");
+document.write("Operator OR (||) - jeden z warunków musi być prawdziwy<br>");
+document.write("Operator NOT (!) - zaprzeczenie warunku<br>");
+}
+
+
+
+if(opcja_szmig == liczba3_szmig+20)
+{
+let liczba_szmig = prompt("Podaj liczbę");
+
+if((liczba_szmig > liczba1_szmig) && (liczba_szmig <= liczba2_szmig))
+{
+document.write("<font color=green size=7>Liczba należy do przedziału</font>");
+}
+else
+{
+document.write("<font color=red size=7>Liczba NIE należy do przedziału</font>");
+}
+}
+
+
+
+if(opcja_szmig == dzien_urodzenia+50)
+{
+let liczba_input_szmig = prompt("Podaj liczbę");
+
+if((liczba_input_szmig < liczba1_szmig) || (liczba_input_szmig >= liczba2_szmig))
+{
+document.write("<font color=green size=7>Liczba należy do przedziału</font>");
+}
+else
+{
+document.write("<font color=red size=7>Liczba NIE należy do przedziału</font>");
+}
+}
+
+
+
+if((opcja_szmig != liczba1_szmig) && (opcja_szmig != liczba3_szmig+20) && (opcja_szmig != dzien_urodzenia+50))
+{
+document.write("<font color=red size=7>Nie ma takiej opcji</font>");
+}
+
+</script>
+
+</body>
+</html>
